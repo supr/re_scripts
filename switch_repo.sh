@@ -51,7 +51,7 @@ function clean_up {
 }
 
 function switch_repo_usage {
-	echo "Usage: switch_repo <user> <production>"
+	echo "Usage: switch_repo <user> <branch>"
 }
 
 function switch_repo {

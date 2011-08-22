@@ -12,9 +12,10 @@ function show_users {
 }
 
 function setup_users {
+	REPO_USERS=()
 	for u in ${USER_DIRS[@]};
 	 do
-		REPO_USERS[${#USERS[*]}]=`basename $u`;
+		REPO_USERS[${#REPO_USERS[*]}]=`basename $u`;
 	 done
 }
 

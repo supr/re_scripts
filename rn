@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+  exit 1
+fi
+
+git log $1..$2 --no-merges --format=%s | sed 's/bugzid/BugzID/I' | sed 's/BugzID: /BugzID:/' | grep '^BugzID' | cut -f1 -d" " 
